@@ -17,25 +17,25 @@ public class Position {
         employee = Optional.empty();
         directReports = new HashSet<Position>();
     }
-
+    //always create a position with a title, directReports
     public Position(String title, Employee employee) {
         this(title);
         if(employee != null)
             setEmployee(Optional.of(employee));
     }
-    
+
     public String getTitle() {
         return title;
     }
-    
+
     public void setEmployee(Optional<Employee> employee) {
         this.employee = employee;
     }
-    
+
     public Optional<Employee> getEmployee() {
         return employee;
     }
-    
+
     public boolean isFilled() {
         return employee.isPresent();
     }
