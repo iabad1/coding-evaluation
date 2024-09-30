@@ -28,6 +28,13 @@ public abstract class Organization {
      * @param title
      * @return the newly filled position or empty if no position has that title
      */
+
+    /*
+            vp sale
+            /    \     \
+            sp    sp
+
+     */
     public Optional<Position> hire(Name person, String title) {
         //your code here
 
@@ -66,7 +73,7 @@ public abstract class Organization {
         Position current;
 
         while(!queuePosition.isEmpty()){
-            //remove top of queue
+            //remove front of queue
             current = queuePosition.poll();
             Collection<Position> directReports = current.getDirectReports();
             for(Position pos : directReports){
